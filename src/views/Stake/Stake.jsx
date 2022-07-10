@@ -225,7 +225,7 @@ function Stake() {
                     <div className="wallet-menu" id="wallet-menu">
                       {modalButton}
                     </div>
-                    <Typography variant="h6">Connect your wallet to stake GUITA</Typography>
+                    <Typography variant="h6">Connect your wallet to stake MHD Token</Typography>
                   </div>
                 ) : (
                   <>
@@ -246,20 +246,20 @@ function Stake() {
 
                       <Box className="stake-action-row " display="flex" alignItems="center">
                         {address && !isAllowanceDataLoading ? (
-                          (!hasAllowance("guita") && view === 0) || (!hasAllowance("sguita") && view === 1) ? (
+                          (!hasAllowance("MHD") && view === 0) || (!hasAllowance("MHD") && view === 1) ? (
                             <Box className="help-text">
                               <Typography variant="body1" className="stake-note" color="textSecondary">
                                 {view === 0 ? (
                                   <>
-                                    First time staking <b>GUITA</b>?
+                                    First time staking <b>MHD</b>?
                                     <br />
-                                    Please approve Guita Dao to use your <b>GUITA</b> for staking.
+                                    Please approve MHD Dao to use your <b>MHD</b> for staking.
                                   </>
                                 ) : (
                                   <>
-                                    First time unstaking <b>sGUITA</b>?
+                                    First time unstaking <b>MHD</b>?
                                     <br />
-                                    Please approve Guita Dao to use your <b>sGUITA</b> for unstaking.
+                                    Please approve MHD Dao to use your <b>MHD</b> for unstaking.
                                   </>
                                 )}
                               </Typography>
@@ -292,7 +292,7 @@ function Stake() {
                         <TabPanel value={view} index={0} className="stake-tab-panel">
                           {isAllowanceDataLoading ? (
                             <Skeleton />
-                          ) : address && hasAllowance("guita") ? (
+                          ) : address && hasAllowance("MHD") ? (
                             <Button
                               className="stake-button"
                               variant="contained"
